@@ -12,7 +12,8 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isRegistering, setIsRegistering] = useState(false);
 
-  const apiBase = "http://localhost:5000/api";
+  // const apiBase = "http://localhost:5000/api";
+  const apiBase = "https://keeper-server-rd3x.onrender.com/api";
 
   const handleApiRequest = useCallback(
     async (endpoint, method, data = null) => {
@@ -91,10 +92,9 @@ function App() {
 
   return (
     <div>
-      <Header logout={logout}/>
+      <Header logout={logout} />
       {isAuthenticated ? (
         <div>
-          
           <CreateArea onAdd={createNote} />
           {notes.map((note) => (
             <Note
