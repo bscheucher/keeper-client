@@ -92,7 +92,7 @@ function App() {
 
   return (
     <div>
-      <Header logout={logout} />
+      <Header logout={logout} isAuthenticated={isAuthenticated}/>
       {isAuthenticated ? (
         <div>
           <CreateArea onAdd={createNote} />

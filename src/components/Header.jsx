@@ -7,9 +7,12 @@ function Header(props) {
       <h1>
         <HighlightIcon />
         Keeper
-        <button onClick={props.logout} className="logout-btn">Logout</button>
+        {props.isAuthenticated && (
+          <button onClick={props.logout} className="logout-btn">
+            Logout
+          </button>
+        )}
       </h1>
-      
     </header>
   );
 }
